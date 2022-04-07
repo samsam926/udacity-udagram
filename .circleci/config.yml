@@ -6,24 +6,12 @@ orbs:
 jobs:
   build:
     docker:
-      - image: "cimg/base:stable"
+      - image: cimg/node:16.14.2
     steps:
       - node/install
       - checkout
       - aws-cli/setup
       - eb/setup
-      - run:
-          name: Check current version of node
-          command: node -v
-      - run:
-          name: Get and install node version manager.
-          command: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-      - run:
-          name: Install Node version 16 using NVM
-          command: nvm install 16 
-      - run:
-          name: Use Node version 16 
-          command: nvm use 16     
       - run:
           name: Front-End Install
           command: npm run frontend:install
