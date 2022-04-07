@@ -10,8 +10,8 @@ export const s3 = new AWS.S3({
   region: config.aws_region,
   params: { Bucket: config.aws_media_bucket },
   credentials: {
-    accessKeyId: process.env.ACCESS_KEY_ID,
-    secretAccessKey: process.env.SECRET_ACCESS_KEY_ID,
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
   },
 });
 
