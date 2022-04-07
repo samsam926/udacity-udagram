@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "backend:install": "cd udagram-api && npm install",
+    "backend:install": "cd udagram-api && npm install --reg https://registry.npmjs.org",
     "frontend:install": "cd udagram-frontend && npm install --legacy-peer-deps",
     "backend:build": "cd udagram-api && npm run build",
     "frontend:build": "cd udagram-frontend && npm run build",
