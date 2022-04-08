@@ -1,1 +1,1 @@
-aws s3 cp --recursive --acl public-read ./www s3://udagram-frontend113/
+aws s3 cp --region us-east-1 --recursive --acl public-read ./www s3://udagram-frontend113/
